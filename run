@@ -47,8 +47,10 @@ ip link set dev $QEMU_BRIDGE up
 touch /var/lib/misc/udhcpd.leases
 udhcpd -I $DUMMY_DHCPD_IP -f $DHCPD_CONF_FILE &
 
+KVM=$([ -e /dev/kvm ] && echo '-enable-kvm' || echo '')
+
 exec /usr/bin/qemu-system-x86_64 \
-     -enable-kvm \
+     $KVM \
      -smp 4 \
      -m 8G \
      -kernel /boot/bzImage \
