@@ -59,4 +59,4 @@ exec /usr/bin/qemu-system-x86_64 \
      -nic tap,id=qemu0,script=$QEMU_IFUP,downscript=$QEMU_IFDOWN \
      -nographic \
      -monitor none \
-     -append "root=/dev/root rw rootfstype=9p rootflags=trans=virtio console=ttyS0 init=/boot/init"
+     -append "root=/dev/root rw rootfstype=9p rootflags=trans=virtio,cache=mmap console=ttyS0 init=/boot/init"
