@@ -1,0 +1,9 @@
+#!/usr/bin/env sh
+
+echo 'PermitRootLogin yes' >> /etc/ssh/sshd_config
+echo 'PermitEmptyPasswords yes' >> /etc/ssh/sshd_config
+passwd -d root
+
+udhcpc
+
+exec /usr/bin/systemd
