@@ -15,7 +15,7 @@ QEMU_IFUP='/boot/qemu-ifup'
 QEMU_IFDOWN='/boot/qemu-ifdown'
 
 # The name of the dhcpd config file we make
-DHCPD_CONF_FILE='dhcpd.conf'
+DHCPD_CONF_FILE='/boot/dhcpd.conf'
 
 function default_intf() {
     ip -json route show |
