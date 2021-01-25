@@ -7,4 +7,5 @@ passwd -d root
 mount -t tmpfs none /tmp
 udhcpc
 
+rm '/usr/lib/systemd/system/serial-getty@.service'
 exec /usr/bin/systemd
